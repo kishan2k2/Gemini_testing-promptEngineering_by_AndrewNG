@@ -1,0 +1,100 @@
+# Objective
+
+1. Nothing, just started this out of curiosity cause I got something new to work on from discord.
+2. !pip vs pip
+3. After this, I need to work with LLM.
+    1. For the maximum benefits of course.
+4. See of llama video of Andrej Karpathy.
+5. Next, I can start hugging face modules.
+
+# Experience
+
+1. Firstly I got OpenAI api key for free.
+2. Principle-1: Write clear and specific instructions.
+    1. Using delimenters like f”””” summarise this  inputs ```{text}``` this is the end """
+        - By using delimiters before giving the input, we restrict the user to give instruction rather than that only the pervious and next of delimiter will act as instructions.
+            
+            ```python
+            text = f"""
+            You should express what you want a model to do by \ 
+            providing instructions that are as clear and \ 
+            specific as you can possibly make them. \ 
+            This will guide the model towards the desired output, \ 
+            and reduce the chances of receiving irrelevant \ 
+            or incorrect responses. Don't confuse writing a \ 
+            clear prompt with writing a short prompt. \ 
+            In many cases, longer prompts provide more clarity \ 
+            and context for the model, which can lead to \ 
+            more detailed and relevant outputs.
+            """
+            prompt = f"""
+            Summarize the text delimited by triple backticks \ 
+            into a single sentence.
+            ```{text}```
+            """
+            response = get_completion(prompt)
+            print(response)
+            ```
+            
+    2. Ask for structured outputs.
+        1. HTML, JSON
+    3. Check weather instructions are satisfied, check assumptions required to do the task.
+        1. Model ko apna kaam karne do and phir model se pucho ki yeah jo kara vo sahi tha kya?
+    4. Few shot prompting.
+        1. Pehle kuch examples dedo and phir bolo ki answer in a consistent format.
+3. Principle-2: Give the model time to think.
+    1. One of the most important thing is consistency, generative models are not good at it.
+        1. By consistency I mean if one response is in the desired format, then rerunning the code wouldn’t necessarily give the desired results.
+    2. Specify steps to complete.
+        1. Rather than doing it in multiple prompts and facing hallucination issues. Do it in the single prompt.
+    3. Instruct the model to work out on its own solution before jumping right to conclusion.
+        1. This becomes more and more relevant when you include the fact that it prompt could be mathematical or logical.
+    4. Haluciantion
+        1. Making statements that sounds plausible but are not actually true.
+        2. To tackle this thing we can use the above tactics.
+4. Iterative. Method to develop prompt.
+    1. There is no perfect prompt that fits all kind of application needs, most important thing is the process of building the prompt.
+    2. Iam getting a feeling like that it is not for those who want to get into the technical details. But its ok sometimes I have explore everything.
+    3. Pehle attempt mein koi acha prompt nahi banata time iteratively improve karna hota hai  
+        - image
+            
+            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4049ceea-998e-413e-b6b8-7e1d97746630/451a4c49-e9ff-4475-80f1-60818c1d9b04/Untitled.png)
+            
+5. Summarize.
+    1. Summarize karte hue yeah batana jarruri hai ki kispe focus hona chahiye.
+    2. Can also be used to extract information.
+    3. This will be convenient and time-saving in real-life products.
+6. Inferring. From reviews, news, and sentiments.
+    1. I always knew about it.
+        1. Extracting sentiment out of a piece of text.
+        2. Extracting things that are not explicitly mentioned, or are explicitly mentioned but are difficult to extract using normal methods.
+    2. Zero-shot learning.
+        1. We do not provide any training data but we get the desired results.
+7. Transforming.
+    1. LLMs are quite good at transforming texts.
+        1. Translating.
+        2. Changing the format i.e. HTML to JSON to others as well.
+    2. I always used to say improvise this and give my text, this used to create too much AI-generated text that was so hard to read.
+        1. Rather than that, I should say f“Proofread and correct {Text}”
+8. Expanding.
+    1. This is one thing that I use the most.
+    2. Use of temperature of varying the exploring capacities.
+    3. In expanding it is important to have transparency at the user end and sign the message as “AI-generated content”.
+    - Temperature example.
+        
+        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4049ceea-998e-413e-b6b8-7e1d97746630/0d4aa8c6-aed8-4aad-8f4f-0d9caa4600b5/Untitled.png)
+        
+9. Chatbots.
+    1. I want to know about how to maintain memory.
+        1. Slowly but steadily she is getting towards what I wanted.
+        2. I am confused about weather models have their context in the same format or the relevant format.
+    2. Play with the chatBOT code, not now I am tired.
+
+# Learnings
+
+1. Feels so good to learn something new after so long.
+2. Prompt engineering is for developers as well.
+3. Thank that person at least be grateful to him.
+4. To find the potential errors in any code.
+    1. Understand the code at a high level and then dive deep into it with each function test them question them. You will find the solution to the problem.
+    2. Kisi bhi chiz ko dil mat laga lena, i.e. {Yeah pehle solve nahi hua toh ab bhi nahi hoga, yeah toh mein kaise hi kar sakta hu, etc etc}
