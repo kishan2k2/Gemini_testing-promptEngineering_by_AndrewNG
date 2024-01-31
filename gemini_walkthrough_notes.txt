@@ -1,0 +1,34 @@
+# Objective
+
+1. Follow the article and implement it.
+    
+    https://medium.com/@codemaker2016/build-your-own-chatgpt-using-google-gemini-api-1b079f6a8415#5f9f
+    
+2. Brainstorm about the various Ideas, products, or applications I can make with Gemini and lang chain, integrating my web dev skills and learning Django.
+3. Though that is a risky bet, I mean I know nothing about all of them.
+4. Smart ATS using llama index
+    1. i.e. I can parse the resumes and find the perfect candidate to hire. 
+5. Just see the llama index repository get an idea and make some of your own.
+6. Use of rag for photo editing.
+    - Link of reel where I got the idea from.
+        
+        [Instagram (@reels)](https://www.instagram.com/reels/C19SpRYS086/)
+        
+7. Do llama index or long-chain right after this.
+8. Play with the temperature and all.
+9. Further research on how is the chathistory maintained.
+    1. In the form of a list i.e. bulking up or what?
+
+# Experience.
+
+1. What if I change the safety settings, Can it do crazy things?
+2. LLM model learns from their chat history.
+    1. Explicit content ahead.
+    2. I first asked about rape, it gave me a very elaborate response.
+    3. Then I asked how to do rape, it blocked the response for me.
+    4. Then again I asked about rape, And now it gave me a very short and diplomatic answer that it couldn’t answer me.
+3. 
+
+# Learnings.
+
+1. Its fun to experiment, its not tough as well.
